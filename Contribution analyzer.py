@@ -15,7 +15,6 @@ def get_commit_count(dir_path, update_progress=None):
     """
     try:
         if update_progress:
-            # 로딩 상태 표시: percent=None과 loading_state=True로 특정 메시지를 보여줍니다.
             update_progress("Get Commit Count...", percent=None, loading_state=True) 
         result = subprocess.run(
             ["git", "-C", dir_path, "rev-list", "--count", "HEAD"],
